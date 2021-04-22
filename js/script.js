@@ -4,8 +4,15 @@ let timeCounter = document.getElementById("timer");
 let questionaire = document.getElementById("quiz-qs");
 let answers = document.getElementById("answer-container");
 let startButton = document.getElementById("start-button");
+let buttonAnswers = document.getElementById ("buttonAnswers");
+let correctAns = document.getElementById ("correctAnswer");
+let incorrectAns = document.getElementById("incorrectAnswer");
+let breakline = document.getElementById("breakline"); //NO SIRVE
+let finalScoreCont = document.getElementById("finalscore-container");
+let quizSection = document.getElementById("quizSect");
 let timeLeft = 75;
 let tiempo = ""; 
+
 
 //Defining the Questions object-array arrangement
 let questions = [
@@ -18,6 +25,7 @@ let questions = [
             { text: "numbers;", score: 5, correct: false }
         ]
     },
+
     {
         question: "The condition in an if/else statement is enclosed within ___?",
         answers: [
@@ -27,6 +35,7 @@ let questions = [
             { text: "square brackets", score: 0, correct: false }
         ]
     },
+
     {
         question: "Arrays in JavaScript can be used to store ___?",
         answers: [
@@ -36,6 +45,7 @@ let questions = [
             { text: "all of the above", score: 0, correct: false }
         ]
     },
+
     {
         question: "A very useful tool used during development and debugging for printing content to the debugger is?",
         answers: [
@@ -47,13 +57,23 @@ let questions = [
     },
 ]
 
+//landing page header and instructions
+questionaire.textContent = "Coding Quiz Challenge";
+answers.textContent = "Try to answer the following questions within the time limit of 75 seconds. Keep in mind that incorrect answers will penalize your score by ten seconds. Good luck!";
+buttonAnswers.style.display = "none";
+correctAns.style.display = "none";
+incorrectAns.style.display = "none";
+breakline.style.display = "none";
+finalScoreCont.style.display = "none";
+
+
 //configure the button with its listener and launch functions
 startButton.addEventListener("click", initiateQuiz);
 
 
 //here I am starting the quiz with a function that will hide some elements using the DOM API and fires other functions for questions and the timer.
 let initiateQuiz = function () {
-    tiempo = setInterval
+    tiempo = setInterval(stopwatch, 1000);
     // let restartquiz = function () {
     //     startButton.style.display = "none"; //quiza quitar
     //     questionaire.style.display = "none";
@@ -79,6 +99,9 @@ let stopwatch = function () {
 let fireQuestions = function () {
 
 }
+
+
+
 
 //Start quiz with button
 // start Timer
