@@ -37,21 +37,27 @@ THEN I can save my initials and my score
 ## URL 
 
 The following animation demonstrates the application functionality:
+https://navena9.github.io/04-APIs-Timed-Quiz/
 
 
 
 
 
 ## Technologies
-HTML
-CSS
-JavaScript
-Intervals
-Local storage
+* HTML
+* CSS
+* JavaScript
+* Local storage
+
+
+
 
 
 
 ### Contributor
+
+
+
 
 Nicolas Cedano Avena
 - - -

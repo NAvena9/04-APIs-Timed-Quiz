@@ -68,11 +68,11 @@ button {
   border:navy;
   width: auto;
   overflow: visible;
-  padding: 10px;
+  padding: 17px;
   background-color: var(--backcolor);
   border-radius: 10px;
   font-size: large;
-  margin: 10px;
+  margin: 30px;
   color: var(--light);
   cursor: pointer;
 }
