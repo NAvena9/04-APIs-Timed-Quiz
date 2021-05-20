@@ -31,7 +31,12 @@ THEN I can save my initials and my score
 ```
 
 
-## ScreenShots
+## Screen Shot
+
+The following image shows the web application's appearance :
+
+![demo](resources/demo.png)
+
 
 
 ## URL 
