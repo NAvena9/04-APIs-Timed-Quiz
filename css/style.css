@@ -1,105 +1,147 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Mobile devices config */
-  @media screen and (max-width: 575px) {
-    .btn-grid {
-      grid-template-columns: repeat(1, auto);
-      gap: 0;
-      margin: 0;
-    }
-  }
+:root {
+  --light: #ffffff;
+  --Right: #9acc37;
+  --backcolor: #3272c5;
+  --backtwo: #2887e0;
+  --dull: #cbced1;
+  --black: #000000;
+}
+
+body {
+  font-family: Tahoma;
+  font-size:large;
+  width: 75%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  justify-content: space-between;
+  margin: 25px 0;
+}
 
 
-  :root {
-    --button-color: #3866ca;
-    --primer-color: #1834d3;
-    --second-color: #3692dd;
-    --white: #ffffff;
-    --correct-color: #5b7a1c;
-  }
+.start-quiz {
+  text-align: center;
+}
 
-  body {
-    font-family: Tahoma, sans-serif;
-    line-height: 1.5;
-    width: 65%;
-    margin: 0 auto;
-  }
+h1 {
+  margin-bottom: 50px;
+  text-align: center;
+}
 
-  a {
-    text-decoration: none;
-  }
-  
-  header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 25px 0;
-    margin-bottom: 50px;
-  }
+h2 {
+  color: var(--dull);
+  border-top: 1px solid var(--black);
+  padding-top: 20px;
+  margin: 20px 0;
+  font-weight: bold;
+  text-align: center;
+}
 
-.scores a, .time {
+/* Buttons */
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+button {
+  font-family: Tahoma;
+  border:navy;
+  width: auto;
+  overflow: visible;
+  padding: 10px;
+  background-color: var(--backcolor);
+  border-radius: 10px;
+  font-size: large;
+  margin: 10px;
+  color: var(--light);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--backtwo);
+}
+
+.hide {
+  display: none;
+}
+
+.btn.correct {
+  background-color: var(--Right);
+}
+
+.btn.wrong {
+  background-color: var(--dull);
+}
+
+/* Wrapper for buttons */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* Enter your initial */
+input[type="text"] {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid var(--dull);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Highscores Page */
+.highscore {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.name-div,
+.score-div {
+  flex: 1 35%;
+  padding: 10px 0;
+  border: 1px solid var(--Right);
+}
+.scores a,
+.timer {
   font-size: 20px;
 }
 
 .scores a {
-  color: var(--primer-color);
+  color: var(--backtwo);
   cursor: pointer;
 }
 
 .scores a:hover {
-  color: var(--second-color);
+  color: var(--dull);
 }
-
-/* Start the Main Section Styling */
-.big-font{
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: xx-large;
-    font-weight: bold;
-    
+/*** MEDIA QUERY FOR MOBILE PHONES AND SMALLER ***/
+/* this will be applied on any screen smaller than 575px */
+@media screen and (max-width: 575px) {
+  .btn-grid {
+    grid-template-columns: repeat(1, auto);
+    gap: 0;
+    margin: 0;
+  }
 }
-
-.answers {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: large;
-}
-
-/* Button */
-.btn-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 20px 0;
-  }
-  
-  
-  button {
-    font-family: Tahoma, sans-serif;
-    border: none;
-    width: auto;
-    overflow: visible;
-    padding: 10px;
-    background-color: var(--button-color);
-    border-radius: 20px;
-    border: var(--second-color);
-    font-size: large;
-    margin: 0 auto;
-    display: block;
-    color: var(--white);
-    cursor: pointer;
-  }
-
-  /* .button-container {
-      display: flex;
-      align-items: center;
-  } */
-
-  
-  button:hover {
-    background-color: var(--primer-color);
-  }

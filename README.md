@@ -49,5 +49,10 @@ JavaScript
 Intervals
 Local storage
 
-## Contributor
-Nicolas Cedano Avena ©2021 All Rights Reserved.
+
+
+### Contributor
+
+Nicolas Cedano Avena
+- - -
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

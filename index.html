@@ -2,76 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Timed Coding Quiz</title>
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
     <header>
         <div class="scores">
-            <a id="high-scores"> View Highscores </a>
+            <a id="highscores-link">View high scores</a>
         </div>
-        <div class="time" id="timer">
+        <div id="timer" class="timer">
             Time: 75
         </div>
     </header>
-    <main>
-        <section class="big-font" id="quiz-qs">
-            <!-- Coding Quiz Challenge -->
-        </section>
 
-        <section class="answers" id="answer-container">
-            <!-- Try to answer the following questions within the time limit of 75 seconds. Keep in mind that incorrect
-            answers will penalize your score by ten seconds. Good luck! -->
+    <section id="start-container" class="start-quiz">
+        <h1>Welcome to the Popculture Quiz Challenge</h1>
+        <p>
+            Lets see how inmerese were you on the latest pop culture evnts of the year!
+            you have 75 seconds to answer a series of non-challenging questions.
+            Every wrong answer will take 10 seconds out of your time and final score.
+            Start your engines... start!
+        </p>
+        <div class="controls">
+            <button id="start-btn" class="start-btn">Start Quiz</button>
+        </div>
+    </section>
 
-        </section>
+    <section id="question-container" class="hide">
+        <h1 id="question">Question</h1>
+        <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
+        <h2 id="check-answer" class="correct-wrong hide"></h2>
+        <div class="controls">
+            <button id="next-btn" class="next-btn hide">Next</button>
+        </div>
+    </section>
 
-        <!-- Quiz & Buttons answ section configuration -->
-    <div id="quizSect" class="hidden">
+    <section id="score-container" class="hide">
+        <form id="submit-form">
+            <h3 id="your-score"></h3>
+            <label id="initials-label">Enter your initials to save the score:</label>
+            <input type="text" id="initials-input" maxlength="3" placeholder="Enter your initials" />
+            <button id="submit-btn">Submit</button>
+        </form>
+    </section>
 
-        <h3 id="questions"></h3>        
-
-            <!-- start button -->
-        <section id="button-container">
-            <button id="start-button">Start Quiz</button>
-        </section>
-            <!-- answer buttons -->
-        <div class="btn-group" id="buttonAnswers">
-            <button id="btn1"><span id="op1"></span></button>
-            <button id="btn2"><span id="op2"></span></button>
-            <button id="btn3"><span id="op3"></span></button>
-            <button id="btn4"><span id="op4"></span></button>
+    <section id="highscores" class="highscores-container hide">
+        <div id="high-scores">
+            <h1 class="centered">Hall of Fame 👑</h1>
+            <div id="highscore" class="highscore highscore-list">
+            </div>
+            <div class="controls">
+                <button id="restart-btn">Restart</button>
+                <button id="clear-btn">Clear Scores</button>
+            </div>
         </div>
         
-        <!-- Questions answer -->
-        <hr id="breakline">
-        <h4 id="correctAnswer"> Correct ✅ </h4>
-        <h4 id="incorrectAnswer"> Incorrect ❌ </h4>
-    </div>
+    </section>
 
-        <!-- Honor roll/score board -->
-        <div id="finalscore-container">
-
-            <div class="honor-roll">
-                <ul id="honor-list">
-
-                    <form id="highscores-form" method="POST">
-                        <label for="highscore-text">Write Your Initials:</label>
-                        <input type="text" name="highscore-text" id="highscore-text">
-                        <button class="button">Submit 🗳</button>
-                    </form>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-
-    </main>
+    <script src="./js/questionatrie.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
