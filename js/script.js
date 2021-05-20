@@ -6,7 +6,7 @@ var nextBtn = document.getElementById("next-btn");
 var questionContEl = document.getElementById("question-container");
 var questionEl = document.getElementById("question");
 var answerBtnEl = document.getElementById("answer-buttons");
-var checkAnswerEl = document.getElementById("check-answer"); //Quiza quitar
+var checkAnswerEl = document.getElementById("check-answer"); 
 var viewHighScores = document.getElementById("highscores-link");
 var submitButton = document.getElementById("submit-btn");
 var clearScoreButton = document.getElementById("clear-btn");
@@ -14,7 +14,7 @@ var initialsField = document.getElementById("player-name");
 var restartButton = document.getElementById("restart-btn");
 var scoreField = document.getElementById("player-score");
 var scores = JSON.parse(localStorage.getItem("scores")) || [];
-var timeLeft = 75;
+var timeLeft = 90;
 var timerID;
 var shuffledQuestions;
 var currentQuestionIndex;
@@ -164,10 +164,10 @@ function hallOfFame(initials) {
     highScoreEl.innerHTML = "";
     for (i = 0; i < scores.length; i++) {
         var div1 = document.createElement("div");
-        div1.setAttribute("class", "name-div");
+        div1.setAttribute("class", "name-init");
         div1.innerText = scores[i].initials;
         var div2 = document.createElement("div");
-        div2.setAttribute("class", "score-div");
+        div2.setAttribute("class", "final-score");
         div2.innerText = scores[i].timeLeft;
         highScoreEl.appendChild(div1);
         highScoreEl.appendChild(div2);
